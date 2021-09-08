@@ -3,18 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		91AB2A2626E8E87700877856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A2526E8E87700877856 /* AppDelegate.swift */; };
 		91AB2A2826E8E87700877856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A2726E8E87700877856 /* SceneDelegate.swift */; };
-		91AB2A2A26E8E87700877856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A2926E8E87700877856 /* ViewController.swift */; };
 		91AB2A2D26E8E87700877856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AB2A2B26E8E87700877856 /* Main.storyboard */; };
 		91AB2A2F26E8E87900877856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91AB2A2E26E8E87900877856 /* Assets.xcassets */; };
 		91AB2A3226E8E87900877856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91AB2A3026E8E87900877856 /* LaunchScreen.storyboard */; };
 		91AB2A3D26E8E87A00877856 /* FBInstaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A3C26E8E87A00877856 /* FBInstaTests.swift */; };
 		91AB2A4826E8E87A00877856 /* FBInstaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A4726E8E87A00877856 /* FBInstaUITests.swift */; };
+		91AB2A5726E90CBA00877856 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 91AB2A5626E90CBA00877856 /* FacebookShare */; };
+		91AB2A5926E90CBA00877856 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91AB2A5826E90CBA00877856 /* FacebookCore */; };
+		91AB2A5B26E90CBA00877856 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 91AB2A5A26E90CBA00877856 /* FacebookAEM */; };
+		91AB2A5D26E90CBA00877856 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 91AB2A5C26E90CBA00877856 /* FacebookLogin */; };
+		91AB2A5F26E90D0900877856 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A5E26E90D0900877856 /* SplashViewController.swift */; };
+		91AB2A6126E90D1F00877856 /* FBFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A6026E90D1F00877856 /* FBFeedViewController.swift */; };
+		91AB2A6326E90D2C00877856 /* InstaFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AB2A6226E90D2C00877856 /* InstaFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		91AB2A2226E8E87700877856 /* FBInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AB2A2526E8E87700877856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91AB2A2726E8E87700877856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91AB2A2926E8E87700877856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91AB2A2C26E8E87700877856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91AB2A2E26E8E87900877856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91AB2A3126E8E87900877856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		91AB2A4326E8E87A00877856 /* FBInstaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBInstaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91AB2A4726E8E87A00877856 /* FBInstaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBInstaUITests.swift; sourceTree = "<group>"; };
 		91AB2A4926E8E87A00877856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91AB2A5E26E90D0900877856 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		91AB2A6026E90D1F00877856 /* FBFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBFeedViewController.swift; sourceTree = "<group>"; };
+		91AB2A6226E90D2C00877856 /* InstaFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AB2A5D26E90CBA00877856 /* FacebookLogin in Frameworks */,
+				91AB2A5B26E90CBA00877856 /* FacebookAEM in Frameworks */,
+				91AB2A5726E90CBA00877856 /* FacebookShare in Frameworks */,
+				91AB2A5926E90CBA00877856 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +113,13 @@
 			children = (
 				91AB2A2526E8E87700877856 /* AppDelegate.swift */,
 				91AB2A2726E8E87700877856 /* SceneDelegate.swift */,
-				91AB2A2926E8E87700877856 /* ViewController.swift */,
 				91AB2A2B26E8E87700877856 /* Main.storyboard */,
 				91AB2A2E26E8E87900877856 /* Assets.xcassets */,
 				91AB2A3026E8E87900877856 /* LaunchScreen.storyboard */,
 				91AB2A3326E8E87900877856 /* Info.plist */,
+				91AB2A5E26E90D0900877856 /* SplashViewController.swift */,
+				91AB2A6026E90D1F00877856 /* FBFeedViewController.swift */,
+				91AB2A6226E90D2C00877856 /* InstaFeedViewController.swift */,
 			);
 			path = FBInsta;
 			sourceTree = "<group>";
@@ -144,6 +158,12 @@
 			dependencies = (
 			);
 			name = FBInsta;
+			packageProductDependencies = (
+				91AB2A5626E90CBA00877856 /* FacebookShare */,
+				91AB2A5826E90CBA00877856 /* FacebookCore */,
+				91AB2A5A26E90CBA00877856 /* FacebookAEM */,
+				91AB2A5C26E90CBA00877856 /* FacebookLogin */,
+			);
 			productName = FBInsta;
 			productReference = 91AB2A2226E8E87700877856 /* FBInsta.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 91AB2A1926E8E87700877856;
+			packageReferences = (
+				91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 91AB2A2326E8E87700877856 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AB2A2A26E8E87700877856 /* ViewController.swift in Sources */,
 				91AB2A2626E8E87700877856 /* AppDelegate.swift in Sources */,
+				91AB2A6326E90D2C00877856 /* InstaFeedViewController.swift in Sources */,
+				91AB2A6126E90D1F00877856 /* FBFeedViewController.swift in Sources */,
 				91AB2A2826E8E87700877856 /* SceneDelegate.swift in Sources */,
+				91AB2A5F26E90D0900877856 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +612,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91AB2A5626E90CBA00877856 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		91AB2A5826E90CBA00877856 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		91AB2A5A26E90CBA00877856 /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		91AB2A5C26E90CBA00877856 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91AB2A5526E90CBA00877856 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91AB2A1A26E8E87700877856 /* Project object */;
 }
