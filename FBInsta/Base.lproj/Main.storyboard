@@ -40,21 +40,49 @@
             </objects>
             <point key="canvasLocation" x="3147.826086956522" y="393.75"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="a7H-Zs-PMd">
             <objects>
-                <viewController id="75U-A8-Zce" customClass="FBFeedViewController" customModule="FBInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="75U-A8-Zce" customClass="LoginViewController" customModule="FBInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOy-yQ-8gD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-fV-ssY">
+                                <rect key="frame" x="135" y="433" width="144" height="30"/>
+                                <state key="normal" title="Login With Facebook"/>
+                                <connections>
+                                    <action selector="onClick_facebook:" destination="75U-A8-Zce" eventType="touchUpInside" id="870-Cf-url"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T8m-84-cVn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Arb-fV-ssY" firstAttribute="centerX" secondItem="FOy-yQ-8gD" secondAttribute="centerX" id="0U1-go-50L"/>
+                            <constraint firstItem="Arb-fV-ssY" firstAttribute="centerY" secondItem="FOy-yQ-8gD" secondAttribute="centerY" id="N7U-a6-gZS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6d0-fX-26N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMY-Tf-aqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3118.840579710145" y="-258.48214285714283"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="gV6-H0-9pL">
+            <objects>
+                <viewController storyboardIdentifier="FBFeedViewController" id="TMc-8U-ub5" customClass="FBFeedViewController" customModule="FBInsta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VQl-6h-9iI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HYc-VN-xUh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuD-Yz-r61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3938" y="-258"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ifk-hm-eZc">
@@ -129,6 +157,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jK-Zg-L9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237.68115942029" y="393.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n3F-6o-VSR">
+            <objects>
+                <viewController id="LVX-Z0-YSY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ZY-mQ-vHe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tU3-5Y-dXy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tld-1H-jeD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="-932"/>
         </scene>
     </scenes>
     <resources>

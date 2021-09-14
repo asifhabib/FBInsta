@@ -8,12 +8,22 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    
+    let viewModel : SplashViewModel! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     
 
     /*
