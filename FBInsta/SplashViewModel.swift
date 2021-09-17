@@ -9,25 +9,21 @@ import Foundation
 import FacebookLogin
 
 protocol SplashViewModel {
+    
+    var isFBLoggedIn : Bool {get}
     func viewDidLoad()
-    func checkFBLogin()
-    func checkInstaLogin()
+//    func checkFBLogin() -> Bool
+//    func checkInstaLogin()
 }
 
 struct SplashViewModelImp : SplashViewModel{
+    var isFBLoggedIn: Bool {
+        return FBManager().checkFBLogin()
+        
+    }
     func viewDidLoad() {
-        checkFBLogin()
-    }
-    
-    func checkFBLogin(){
-        guard let accessToken = AccessToken.current,
-              !accessToken.isExpired else {
-         return
-        }
         
     }
     
-    func checkInstaLogin() {
-        
-    }
+    
 }

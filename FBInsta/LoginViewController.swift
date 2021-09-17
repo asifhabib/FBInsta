@@ -33,31 +33,60 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func onClick_facebook( _ sender : Any){
-        LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { result, error in
-            if let error = error {
-                
-            }
-            else {
-                
-                GraphRequest(graphPath: "me").start { connecting, value, error in
-                    if let error = error {
-                        print("Error :\(error)")
-                    }
-                    else {
-                        print("Response :\(value)")
-                        if let value = value as? [String : String] {
-                            print("Name :\(value["name"])")
-                            print("Name :\(value["id"])")
-                            print("Name :\(value["email"])")
-                        }
-                    }
-                    
-                }
-                
-                
-                
+        
+//        let token = AccessToken(tokenString: "", permissions: [], declinedPermissions: [], expiredPermissions: [], appID: "", userID: "")
+        
+//        public_profile", "email", "user-posts", "user_link", "user_photos", "user_videos"
+        let config = LoginConfiguration(permissions: [.email, .publicProfile, .userPosts, .userPhotos, .userVideos], tracking: .enabled)!
+        
+        
+        
+        
+        LoginManager().logIn(configuration: config) { result in
+            switch result {
+            case .success(let granted,let declined,let token):
+                print("Success Granted :\(granted), declined: \(declined), Token: \(token)")
+            case .failed(let error):
+                print("Failed with Error :\(error)")
+            case .cancelled:
+                print("Requet canceled")
             }
         }
+        
+//        LoginManager().logIn(permissions: ["public_profile", "email", "user-posts"], from: self) { result, error in
+//
+//        }
+//
+//
+//        LoginManager.logIn(<#T##self: LoginManager##LoginManager#>)
+        
+        
+        
+//        LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { result, error in
+//            if let error = error {
+//
+//            }
+//            else {
+//
+//                GraphRequest(graphPath: "me").start { connecting, value, error in
+//                    if let error = error {
+//                        print("Error :\(error)")
+//                    }
+//                    else {
+//                        print("Response :\(value)")
+//                        if let value = value as? [String : String] {
+//                            print("Name :\(value["name"])")
+//                            print("Name :\(value["id"])")
+//                            print("Name :\(value["email"])")
+//                        }
+//                    }
+//
+//                }
+//
+//
+//
+//            }
+//        }
     }
 
     /*

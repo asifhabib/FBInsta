@@ -1,34 +1,19 @@
 //
-//  SplashViewController.swift
+//  ProfileViewController.swift
 //  FBInsta
 //
-//  Created by Asif Habib on 08/09/2021.
+//  Created by Asif Habib on 17/09/2021.
 //
 
 import UIKit
 
-class SplashViewController: UIViewController {
-    
-    let viewModel : SplashViewModel = SplashViewModelImp()
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if viewModel.isFBLoggedIn{
-            AppDelegate.moveToFeed()
-        }
-        else{
-            AppDelegate.moveToLogin()
-        }
-        
-       
-    }
-    
     
 
     /*

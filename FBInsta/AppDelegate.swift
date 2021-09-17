@@ -50,3 +50,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    
+    
+    static func moveToLogin(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+        change(root: vc)
+    }
+    static func moveToFeed(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: .main)
+        
+        let fbFeed = storyBoard.instantiateViewController(withIdentifier: "FBFeedViewController")
+        let nav1 = UINavigationController(rootViewController: fbFeed)
+        nav1.title = "Facebook"
+        
+        let isntaFeed = storyBoard.instantiateViewController(withIdentifier: "InstaFeedViewController")
+        let nav2 = UINavigationController(rootViewController: isntaFeed)
+        nav2.title = "Insta"
+        
+        let profileVC = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController")
+        let nav3 = UINavigationController(rootViewController: profileVC)
+        nav3.title = "Profile"
+        
+        let tabbarController = UITabBarController()
+        tabbarController.addChild(nav1)
+        tabbarController.addChild(nav2)
+        tabbarController.addChild(nav3)
+        
+        change(root: tabbarController)
+    }
+    static func change(root vc : UIViewController){
+        UIApplication.shared.windows.first?.rootViewController = vc
+    }
+ }
