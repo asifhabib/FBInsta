@@ -64,7 +64,7 @@ class FBFeedViewController: UIViewController {
 //        // Insert your code here
 //    }];
     func fetchFBFeed(){
-        let request = GraphRequest(graphPath: "/me", parameters: ["fields":"id,posts{caption,full_picture,source}"], tokenString: "EAAFYZAugEJEABAJoJREIqdooXmw4FC9ZB6Yu0Bek3K4N2F4keOa1whjeWrGN2UKulYwwqHmXwtZAoxhXAI5ZCs0ur9VMZAk2DVbESxBFbJkPTiglwyaGH1XuhqgsawyCRVNAAzParzZBkBuZAl0XuIQ7VhyeoBmZA3Nh3PWn7EaS9H304kg3G5IiYn3Pgbvx8FHZCJdZAggm0QJD8WXp1GTWiT7aV8CSRiwAeZBZATsIipDMcJDabAqXIDU1Uhhcw5tomboZD", version: nil, httpMethod: .get)
+        let request = GraphRequest(graphPath: "/me", parameters: ["fields":"id,posts{caption,full_picture,source}"], tokenString: "EAAFYZAugEJEABALuXZA4RnnP7oyP5e41m616WdoRP1YsCoMi7OBFVgKMEBUi6wQuHJBkWwKZA3IQZAtJnwVHXcfIax9b31o3KtK3bHvVKhxnCC5mqq3is8wn0FZCElynODyQDwQ760x9LTXHxT3MTM8xqqTSZAz70ZBPe9AKmB7LLjSOieGOKFp6Hkb0o7uyeBXZC3OZATj4vcsHtTlAaevPZCjZA1PCciMYZAuWfQKkNwwHWZARvf91VOraphZBUtoSwh8NMZD", version: nil, httpMethod: .get)
         request.start { connection, result, error in
             if let error = error {
                 print("Requst Error :\(error)")

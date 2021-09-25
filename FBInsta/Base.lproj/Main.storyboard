@@ -63,19 +63,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-fV-ssY">
-                                <rect key="frame" x="135" y="433" width="144" height="30"/>
-                                <state key="normal" title="Login With Facebook"/>
-                                <connections>
-                                    <action selector="onClick_facebook:" destination="75U-A8-Zce" eventType="touchUpInside" id="870-Cf-url"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-rx-sxV">
+                                <rect key="frame" x="135" y="350.5" width="144" height="195"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-fV-ssY">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                        <state key="normal" title="Login With Facebook"/>
+                                        <connections>
+                                            <action selector="onClick_facebook:" destination="75U-A8-Zce" eventType="touchUpInside" id="870-Cf-url"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53c-H6-Pdh">
+                                        <rect key="frame" x="29" y="55" width="86" height="30"/>
+                                        <state key="normal" title="Primary Icon"/>
+                                        <connections>
+                                            <action selector="onClick_primary:" destination="75U-A8-Zce" eventType="touchUpInside" id="tPB-OI-NI3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps1-yB-n4x">
+                                        <rect key="frame" x="51" y="110" width="42" height="30"/>
+                                        <state key="normal" title="Icon 2"/>
+                                        <connections>
+                                            <action selector="onClick_icon2:" destination="75U-A8-Zce" eventType="touchUpInside" id="gox-qz-TDe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-BJ-oSK">
+                                        <rect key="frame" x="50.5" y="165" width="43" height="30"/>
+                                        <state key="normal" title="Icon 3"/>
+                                        <connections>
+                                            <action selector="onClick_icon3:" destination="75U-A8-Zce" eventType="touchUpInside" id="4J2-GQ-IfT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T8m-84-cVn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Arb-fV-ssY" firstAttribute="centerX" secondItem="FOy-yQ-8gD" secondAttribute="centerX" id="0U1-go-50L"/>
-                            <constraint firstItem="Arb-fV-ssY" firstAttribute="centerY" secondItem="FOy-yQ-8gD" secondAttribute="centerY" id="N7U-a6-gZS"/>
+                            <constraint firstItem="4VE-rx-sxV" firstAttribute="centerX" secondItem="FOy-yQ-8gD" secondAttribute="centerX" id="iu2-Q7-TOo"/>
+                            <constraint firstItem="4VE-rx-sxV" firstAttribute="centerY" secondItem="FOy-yQ-8gD" secondAttribute="centerY" id="pGl-PE-RDL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6d0-fX-26N"/>
