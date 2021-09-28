@@ -49,10 +49,10 @@ class FBFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: cellName, bundle: .main ), forCellReuseIdentifier: cellName)
+      //  tableView.register(UINib(nibName: cellName, bundle: .main ), forCellReuseIdentifier: cellName)
 //        tableView.estimatedRowHeight = 100
 //        tableView.rowHeight = UITableView.automaticDimension
-        fetchFBFeed()
+        //fetchFBFeed()
 
         // Do any additional setup after loading the view.
     }

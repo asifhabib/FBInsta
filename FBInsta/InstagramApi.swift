@@ -91,8 +91,8 @@ class InstagramApi {
                 print(jsonData)
                 completion(jsonData)
             }
-            catch let error as NSError {
-                print(error)
+            catch  {
+                print(error.localizedDescription)
             }
         })
         task.resume()
@@ -194,10 +194,10 @@ class InstagramApi {
         dataTask.resume()
     }
     
-    func getMedia(testUserData: InstagramTestUser, completion: @escaping (InstagramMedia) -> Void) {
+    func getMedia(testUserData: InstagramTestUser, completion: @escaping (Feed) -> Void) {
         
         getMediaData(testUserData: testUserData) { (mediaFeed) in
-            
+            completion(mediaFeed)
         }
 //            let urlString  = "\(BaseURL.graphApi.rawValue + mediaFeed.data[1].id)?fields=id,media_type,media_url,username,timestamp&access_token=\(testUserData.access_token)"
 //            let request = URLRequest(url: URL(string: urlString)!)
