@@ -14,8 +14,6 @@ class InstagramCell: UITableViewCell {
     @IBOutlet weak var feedVideoPlayerView: UIView!
     @IBOutlet weak var hashTagsLabel: UILabel!
     
-    var avPlayer: AVPlayer?
-    
     var cellMedia : MediaData? {
         didSet {
             
@@ -29,11 +27,11 @@ class InstagramCell: UITableViewCell {
                 self.bringSubviewToFront(feedVideoPlayerView)
                 
                 let url = URL(string: objc!)!
-                avPlayer  = AVPlayer(playerItem: AVPlayerItem(url: url))
+                let avPlayer = AVPlayer(playerItem: AVPlayerItem(url: url))
                 let avPlayerLayer = AVPlayerLayer(player: avPlayer)
                 avPlayerLayer.frame = feedVideoPlayerView.bounds
                 feedVideoPlayerView.layer.insertSublayer(avPlayerLayer, at: 0)
-                avPlayer!.play()
+                avPlayer.play()
 
             } else {
                 self.bringSubviewToFront(feedImageView)
