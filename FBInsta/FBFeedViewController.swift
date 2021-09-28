@@ -18,6 +18,7 @@ struct Paging : Codable {
 struct FBFeedItem : Codable {
     let full_picture : String?
     let id : String?
+    let message : String?
 //    ": "https://scontent.flhe15-1.fna.fbcdn.net/v/t1.6435-9/241502320_4264165526983084_793203289615585546_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=110474&_nc_eui2=AeHnA7W7y6XzTH9reUpJFu1kP4ms36y8q8c_iazfrLyrx14bkZukT7VFsNjAn6eJUp4&_nc_ohc=Y-XBTYGs1qoAX_rf1Bb&_nc_ht=scontent.flhe15-1.fna&edm=AP4hL3IEAAAA&oh=3d7df046f5c86978696c4ef7648d9dcb&oe=616953F2",
 //    "id":
 }
@@ -49,13 +50,18 @@ class FBFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  tableView.register(UINib(nibName: cellName, bundle: .main ), forCellReuseIdentifier: cellName)
-//        tableView.estimatedRowHeight = 100
-//        tableView.rowHeight = UITableView.automaticDimension
-        //fetchFBFeed()
+        title = "Facebook Feed"
+        tableView.register(UINib(nibName: cellName, bundle: .main ), forCellReuseIdentifier: cellName)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        fetchFBFeed()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
 //    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
 //        initWithGraphPath:@"/me"
 //               parameters:@{ @"fields": @"id,posts{caption,full_picture,source}",}
@@ -64,8 +70,20 @@ class FBFeedViewController: UIViewController {
 //        // Insert your code here
 //    }];
     func fetchFBFeed(){
-        let request = GraphRequest(graphPath: "/me", parameters: ["fields":"id,posts{caption,full_picture,source}"], tokenString: "EAAFYZAugEJEABALuXZA4RnnP7oyP5e41m616WdoRP1YsCoMi7OBFVgKMEBUi6wQuHJBkWwKZA3IQZAtJnwVHXcfIax9b31o3KtK3bHvVKhxnCC5mqq3is8wn0FZCElynODyQDwQ760x9LTXHxT3MTM8xqqTSZAz70ZBPe9AKmB7LLjSOieGOKFp6Hkb0o7uyeBXZC3OZATj4vcsHtTlAaevPZCjZA1PCciMYZAuWfQKkNwwHWZARvf91VOraphZBUtoSwh8NMZD", version: nil, httpMethod: .get)
-        request.start { connection, result, error in
+        
+        let request = GraphRequest(graphPath: "/me", parameters: ["fields":"id,posts{caption,full_picture,source,message}"], httpMethod: .get)
+        
+        
+        request.start
+        {
+//            <#GraphRequestConnecting?#>, <#Any?#>, <#Error?#> in
+//            <#code#>
+//        }
+//        
+//        
+//        let request = GraphRequest(graphPath: "/me", parameters: ["fields":"id,posts{caption,full_picture,source}"], tokenString: "EAAFYZAugEJEABALuXZA4RnnP7oyP5e41m616WdoRP1YsCoMi7OBFVgKMEBUi6wQuHJBkWwKZA3IQZAtJnwVHXcfIax9b31o3KtK3bHvVKhxnCC5mqq3is8wn0FZCElynODyQDwQ760x9LTXHxT3MTM8xqqTSZAz70ZBPe9AKmB7LLjSOieGOKFp6Hkb0o7uyeBXZC3OZATj4vcsHtTlAaevPZCjZA1PCciMYZAuWfQKkNwwHWZARvf91VOraphZBUtoSwh8NMZD", version: nil, httpMethod: .get)
+//        request.start {
+            connection, result, error in
             if let error = error {
                 print("Requst Error :\(error)")
             }
@@ -90,7 +108,7 @@ class FBFeedViewController: UIViewController {
         var response = response
         
         response.posts?.data?.removeAll(where: { item in
-            item.full_picture == nil
+            item.full_picture == nil && item.message == nil
         })
         
         self.response = response
@@ -115,7 +133,7 @@ extension FBFeedViewController : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.frame.width
+        return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return response?.posts?.data?.count ?? 0
@@ -125,9 +143,19 @@ extension FBFeedViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName) as! FBFeedCell
         let item = response?.posts?.data?[indexPath.row]
         
+        if let string = item?.full_picture, let url = URL(string: string){
+            cell.nineSixteenConstrains.priority = UILayoutPriority(999)
+            cell.zeroheightConstraint.priority = UILayoutPriority(250)
+            cell.feedImage.sd_setImage(with: url)
+        }
+        else {
+            cell.nineSixteenConstrains.priority = UILayoutPriority(250)
+            cell.zeroheightConstraint.priority = UILayoutPriority(999)
+            cell.feedImage.image = nil
+        }
         
         
-        cell.feedImage.sd_setImage(with: URL(string: (item?.full_picture)!))
+        cell.feedText.text = item?.message
         return cell
         
     }

@@ -14,24 +14,21 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let loginButton = FBLoginButton()
-//                loginButton.center = view.center
-//                view.addSubview(loginButton)
-//        loginButton.permissions = ["public_profile", "email"]
-        
-//        LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { result, error in
-//            if let error = error {
-//
-//            }
-//            else if let result = result {
-//             LoginManagerLoginResult
-//            }
-//        }
-        
+        checkFBLogin()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    func checkFBLogin() {
+        let fbFeed = self.storyboard!.instantiateViewController(withIdentifier: "FBFeedViewController")
+        if FBManager().checkFBLogin(){
+            self.navigationController?.setViewControllers([fbFeed], animated: false)
+        }
+        
+        
+    }
+    
     @IBAction func onClick_facebook( _ sender : Any){
         
 //        let token = AccessToken(tokenString: "", permissions: [], declinedPermissions: [], expiredPermissions: [], appID: "", userID: "")
@@ -42,10 +39,11 @@ class LoginViewController: UIViewController {
         
         
         
-        LoginManager().logIn(configuration: config) { result in
+        LoginManager().logIn(configuration: config) { [weak self] result in
             switch result {
             case .success(let granted,let declined,let token):
                 print("Success Granted :\(granted), declined: \(declined), Token: \(token)")
+                self?.moveToFeed()
             case .failed(let error):
                 print("Failed with Error :\(error)")
             case .cancelled:
@@ -90,25 +88,16 @@ class LoginViewController: UIViewController {
 //            }
 //        }
     }
-    @IBAction func onClick_primary(_ sender : Any){
-        
-        UIApplication.shared.setAlternateIconName(nil) { error in
-            print("Error :\(error)")
+    
+    
+    func moveToFeed(){
+        let fbFeed = self.storyboard!.instantiateViewController(withIdentifier: "FBFeedViewController")
+        if FBManager().checkFBLogin(){
+            self.navigationController?.setViewControllers([fbFeed], animated: true)
         }
-        
+//        AppDelegate.moveToFeed(isFacebook: true)
     }
-    @IBAction func onClick_icon2(_ sender : Any){
-        
-        UIApplication.shared.setAlternateIconName("AppIcon-2") { error in
-            print("Error :\(error)")
-        }
-        
-    }
-    @IBAction func onClick_icon3(_ sender : Any){
-        UIApplication.shared.setAlternateIconName("AppIcon-3") { error in
-            print("Error :\(error)")
-        }
-    }
+    
 
     /*
     // MARK: - Navigation

@@ -9,7 +9,12 @@ import UIKit
 
 class FBFeedCell: UITableViewCell {
     
+    
+    
+    @IBOutlet weak var zeroheightConstraint : NSLayoutConstraint!
+    @IBOutlet weak var nineSixteenConstrains : NSLayoutConstraint!
     @IBOutlet weak var feedImage : UIImageView!
+    @IBOutlet weak var feedText : UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

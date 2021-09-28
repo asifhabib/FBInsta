@@ -62,7 +62,11 @@ extension AppDelegate {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)
         
-        let fbFeed = storyBoard.instantiateViewController(withIdentifier: "FBFeedViewController")
+        
+        
+        
+        
+        let fbFeed = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
         let nav1 = UINavigationController(rootViewController: fbFeed)
         nav1.title = "Facebook"
         
@@ -72,7 +76,7 @@ extension AppDelegate {
         
         let profileVC = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController")
         let nav3 = UINavigationController(rootViewController: profileVC)
-        nav3.title = "Profile"
+        nav3.title = "App Icons"
         
         let tabbarController = UITabBarController()
         tabbarController.addChild(nav1)

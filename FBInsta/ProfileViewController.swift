@@ -15,6 +15,26 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onClick_primary(_ sender : Any){
+        
+        UIApplication.shared.setAlternateIconName(nil) { error in
+            print("Error :\(error)")
+        }
+        
+    }
+    @IBAction func onClick_icon2(_ sender : Any){
+        
+        UIApplication.shared.setAlternateIconName("AppIcon-2") { error in
+            print("Error :\(error)")
+        }
+        
+    }
+    @IBAction func onClick_icon3(_ sender : Any){
+        UIApplication.shared.setAlternateIconName("AppIcon-3") { error in
+            print("Error :\(error)")
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

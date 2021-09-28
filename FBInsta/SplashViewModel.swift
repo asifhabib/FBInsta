@@ -11,6 +11,7 @@ import FacebookLogin
 protocol SplashViewModel {
     
     var isFBLoggedIn : Bool {get}
+    var isInstaLogin : Bool {get}
     func viewDidLoad()
 //    func checkFBLogin() -> Bool
 //    func checkInstaLogin()
@@ -20,6 +21,9 @@ struct SplashViewModelImp : SplashViewModel{
     var isFBLoggedIn: Bool {
         return FBManager().checkFBLogin()
         
+    }
+    var isInstaLogin: Bool {
+        return false
     }
     func viewDidLoad() {
         

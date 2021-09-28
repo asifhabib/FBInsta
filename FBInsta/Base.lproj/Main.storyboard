@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,8 +66,40 @@
                     <view key="view" contentMode="scaleToFill" id="ytz-MG-GiY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="N07-gC-zA3">
+                                <rect key="frame" x="164" y="378" width="86" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-dK-wsR">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                        <state key="normal" title="Primary Icon"/>
+                                        <connections>
+                                            <action selector="onClick_primary:" destination="izs-ZK-qMt" eventType="touchUpInside" id="yxl-7U-xmi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgv-se-2DJ">
+                                        <rect key="frame" x="22" y="55" width="42" height="30"/>
+                                        <state key="normal" title="Icon 2"/>
+                                        <connections>
+                                            <action selector="onClick_icon2:" destination="izs-ZK-qMt" eventType="touchUpInside" id="MOL-vg-g0X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-1E-Nlh">
+                                        <rect key="frame" x="21.5" y="110" width="43" height="30"/>
+                                        <state key="normal" title="Icon 3"/>
+                                        <connections>
+                                            <action selector="onClick_icon3:" destination="izs-ZK-qMt" eventType="touchUpInside" id="AhS-PW-Zpl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iT4-yI-cav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N07-gC-zA3" firstAttribute="centerX" secondItem="ytz-MG-GiY" secondAttribute="centerX" id="BJg-hI-moN"/>
+                            <constraint firstItem="N07-gC-zA3" firstAttribute="centerY" secondItem="ytz-MG-GiY" secondAttribute="centerY" id="Clt-X6-tAx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9z-aL-JKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -84,34 +115,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-rx-sxV">
-                                <rect key="frame" x="135" y="350.5" width="144" height="195"/>
+                                <rect key="frame" x="135" y="433" width="144" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-fV-ssY">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
                                         <state key="normal" title="Login With Facebook"/>
                                         <connections>
                                             <action selector="onClick_facebook:" destination="75U-A8-Zce" eventType="touchUpInside" id="870-Cf-url"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53c-H6-Pdh">
-                                        <rect key="frame" x="29" y="55" width="86" height="30"/>
-                                        <state key="normal" title="Primary Icon"/>
-                                        <connections>
-                                            <action selector="onClick_primary:" destination="75U-A8-Zce" eventType="touchUpInside" id="tPB-OI-NI3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps1-yB-n4x">
-                                        <rect key="frame" x="51" y="110" width="42" height="30"/>
-                                        <state key="normal" title="Icon 2"/>
-                                        <connections>
-                                            <action selector="onClick_icon2:" destination="75U-A8-Zce" eventType="touchUpInside" id="gox-qz-TDe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-BJ-oSK">
-                                        <rect key="frame" x="50.5" y="165" width="43" height="30"/>
-                                        <state key="normal" title="Icon 3"/>
-                                        <connections>
-                                            <action selector="onClick_icon3:" destination="75U-A8-Zce" eventType="touchUpInside" id="4J2-GQ-IfT"/>
                                         </connections>
                                     </button>
                                 </subviews>
