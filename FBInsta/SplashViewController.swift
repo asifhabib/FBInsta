@@ -19,12 +19,12 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if viewModel.isFBLoggedIn{
+//        if viewModel.isFBLoggedIn{
             AppDelegate.moveToFeed()
-        }
-        else{
-            AppDelegate.moveToLogin()
-        }
+//        }
+//        else{
+//            AppDelegate.moveToLogin()
+//        }
         
        
     }

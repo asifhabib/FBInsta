@@ -34,6 +34,10 @@
 		91DB054B26F8F7A000A196DB /* Icon-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91DB054926F8F79F00A196DB /* Icon-2@2x.png */; };
 		91DB054E26F8F80100A196DB /* Icon-3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91DB054C26F8F80100A196DB /* Icon-3@3x.png */; };
 		91DB055126F8F84D00A196DB /* Icon-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91DB055026F8F84D00A196DB /* Icon-3@2x.png */; };
+		CF8C82D32701CE0300D1DF83 /* InstagramApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C82D22701CE0300D1DF83 /* InstagramApi.swift */; };
+		CF8C82D52701CFB500D1DF83 /* InstagramTestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C82D42701CFB500D1DF83 /* InstagramTestUser.swift */; };
+		CF8C82DC2702029700D1DF83 /* InstagramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8C82DA2702029700D1DF83 /* InstagramCell.swift */; };
+		CF8C82DD2702029700D1DF83 /* InstagramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8C82DB2702029700D1DF83 /* InstagramCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		91DB054926F8F79F00A196DB /* Icon-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-2@2x.png"; path = "Assets.xcassets/AppIcon-2.appiconset/Icon-2@2x.png"; sourceTree = "<group>"; };
 		91DB054C26F8F80100A196DB /* Icon-3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-3@3x.png"; path = "Assets.xcassets/AppIcon-3.appiconset/Icon-3@3x.png"; sourceTree = "<group>"; };
 		91DB055026F8F84D00A196DB /* Icon-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-3@2x.png"; path = "Assets.xcassets/AppIcon-3.appiconset/Icon-3@2x.png"; sourceTree = "<group>"; };
+		CF8C82D22701CE0300D1DF83 /* InstagramApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramApi.swift; sourceTree = "<group>"; };
+		CF8C82D42701CFB500D1DF83 /* InstagramTestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTestUser.swift; sourceTree = "<group>"; };
+		CF8C82DA2702029700D1DF83 /* InstagramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCell.swift; sourceTree = "<group>"; };
+		CF8C82DB2702029700D1DF83 /* InstagramCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstagramCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,8 @@
 				91AFAECB26EA1C9800E6D775 /* SplashViewModel.swift */,
 				91AB2A6026E90D1F00877856 /* FBFeedViewController.swift */,
 				91AB2A6226E90D2C00877856 /* InstaFeedViewController.swift */,
+				CF8C82D22701CE0300D1DF83 /* InstagramApi.swift */,
+				CF8C82D42701CFB500D1DF83 /* InstagramTestUser.swift */,
 				91AFAECD26EA2C0C00E6D775 /* LoginViewController.swift */,
 				91AFAECF26EA2C1C00E6D775 /* LoginViewModel.swift */,
 				91915E0526F1033E00284DDB /* FBManager.swift */,
@@ -158,6 +168,8 @@
 				91B3A33F26F48EDE006BDF2E /* ProfileViewModel.swift */,
 				91B3A34126F48FC2006BDF2E /* FBFeedCell.swift */,
 				91B3A34226F48FC2006BDF2E /* FBFeedCell.xib */,
+				CF8C82DA2702029700D1DF83 /* InstagramCell.swift */,
+				CF8C82DB2702029700D1DF83 /* InstagramCell.xib */,
 			);
 			path = FBInsta;
 			sourceTree = "<group>";
@@ -299,6 +311,7 @@
 				91DB054A26F8F7A000A196DB /* Icon-2@3x.png in Resources */,
 				91AB2A2F26E8E87900877856 /* Assets.xcassets in Resources */,
 				91DB054E26F8F80100A196DB /* Icon-3@3x.png in Resources */,
+				CF8C82DD2702029700D1DF83 /* InstagramCell.xib in Resources */,
 				91AB2A2D26E8E87700877856 /* Main.storyboard in Resources */,
 				91DB055126F8F84D00A196DB /* Icon-3@2x.png in Resources */,
 				91B3A34426F48FC2006BDF2E /* FBFeedCell.xib in Resources */,
@@ -329,15 +342,18 @@
 				91AFAECE26EA2C0C00E6D775 /* LoginViewController.swift in Sources */,
 				91AB2A2626E8E87700877856 /* AppDelegate.swift in Sources */,
 				91B3A33E26F48EC8006BDF2E /* ProfileViewController.swift in Sources */,
+				CF8C82D52701CFB500D1DF83 /* InstagramTestUser.swift in Sources */,
 				91B3A34326F48FC2006BDF2E /* FBFeedCell.swift in Sources */,
 				91AB2A6326E90D2C00877856 /* InstaFeedViewController.swift in Sources */,
 				91AB2A6126E90D1F00877856 /* FBFeedViewController.swift in Sources */,
 				91915E0626F1033E00284DDB /* FBManager.swift in Sources */,
+				CF8C82D32701CE0300D1DF83 /* InstagramApi.swift in Sources */,
 				91AFAED026EA2C1C00E6D775 /* LoginViewModel.swift in Sources */,
 				91B3A34026F48EDF006BDF2E /* ProfileViewModel.swift in Sources */,
 				91AFAECC26EA1C9800E6D775 /* SplashViewModel.swift in Sources */,
 				91AB2A2826E8E87700877856 /* SceneDelegate.swift in Sources */,
 				91AB2A5F26E90D0900877856 /* SplashViewController.swift in Sources */,
+				CF8C82DC2702029700D1DF83 /* InstagramCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
